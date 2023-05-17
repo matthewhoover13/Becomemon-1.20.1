@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "becomemon",
+	"version": "${version}",
+	"name": "Becomemon",
+	"description": "TO DO: Change description in fabric.mod.json",
+	"authors": [
+		"Hoover"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/becomemon/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"hoover.becomemon.Becomemon"
+		],
+		"client": [
+			"hoover.becomemon.BecomemonClient"
+		],
+		"fabric-datagen": [
+			"hoover.becomemon.BecomemonDataGenerator"
+		]
+	},
+	"mixins": [
+		"becomemon.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
