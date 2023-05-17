@@ -1,5 +1,6 @@
 package hoover.becomemon;
 
+import hoover.becomemon.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ public class Becomemon implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModRegistries.registerModStuff();
         LOGGER.info("Hello Fabric world!");
     }
 }
