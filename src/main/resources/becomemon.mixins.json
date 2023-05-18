@@ -3,7 +3,8 @@
 	"package": "hoover.becomemon.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ModEntityDataSaver"
+		"ModEntityDataSaver",
+		"ModLivingEntityTypeInjector"
 	],
 	"injectors": {
 		"defaultRequire": 1
