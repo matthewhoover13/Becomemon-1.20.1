@@ -24,13 +24,15 @@ public class PrintTypeCommand {
 
     private static int run(ServerCommandSource source, Collection<? extends Entity> targets) throws CommandSyntaxException {
         for (Entity target : targets) {
-            IEntityDataSaver targetAsDataSaver = (IEntityDataSaver)target;
-            String type = targetAsDataSaver.getPersistentData().getString("type");
+            if (target.isLiving()) {
+                IEntityDataSaver targetAsDataSaver = (IEntityDataSaver) target;
+                String type = targetAsDataSaver.getPersistentData().getString("type");
 
-            if (type.length() > 0) {
-                source.sendFeedback(Text.of("Type of " + target.getName().getString() + " is " + type), true);
-            } else {
-                source.sendFeedback(Text.of("No type has been set for " + target.getName().getString()), true);
+                if (type.length() > 0) {
+                    source.sendFeedback(Text.of("Type of " + target.getName().getString() + " is " + type), true);
+                } else {
+                    source.sendFeedback(Text.of("No type has been set for " + target.getName().getString()), true);
+                }
             }
         }
         return 0;
