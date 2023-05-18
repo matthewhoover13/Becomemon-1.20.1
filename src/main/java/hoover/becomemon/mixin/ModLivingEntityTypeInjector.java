@@ -16,171 +16,178 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class ModLivingEntityTypeInjector {
     @Inject(method = "<init>", at = @At("TAIL"))
     protected void injectTypeIntoConstructor(EntityType<? extends LivingEntity> entityType, World world, CallbackInfo info) {
-        BecomemonType type = switch (entityType.getUntranslatedName()) {
+        BecomemonType[] type = switch (entityType.getUntranslatedName()) {
             case "allay":
-                yield BecomemonType.FAIRY;
+                yield new BecomemonType[]{ BecomemonType.FAIRY, BecomemonType.TYPELESS };
             case "axolotl":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "bat":
-                yield BecomemonType.FLYING;
+                yield new BecomemonType[]{ BecomemonType.FLYING, BecomemonType.TYPELESS };
             case "bee":
-                yield BecomemonType.BUG;
+                yield new BecomemonType[]{ BecomemonType.BUG, BecomemonType.FLYING };
             case "blaze":
-                yield BecomemonType.FIRE;
+                yield new BecomemonType[]{ BecomemonType.FIRE, BecomemonType.TYPELESS };
             case "camel":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "cat":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "cave_spider":
-                yield BecomemonType.POISON;
+                yield new BecomemonType[]{ BecomemonType.BUG, BecomemonType.POISON };
             case "chicken":
-                yield BecomemonType.FLYING;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.FLYING };
             case "cod":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "cow":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "creeper":
-                yield BecomemonType.ELECTRIC;
+                yield new BecomemonType[]{ BecomemonType.ELECTRIC, BecomemonType.TYPELESS };
             case "dolphin":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "donkey":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "drowned":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.WATER };
             case "elder_guardian":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.DARK };
             case "ender_dragon":
-                yield BecomemonType.DRAGON;
+                yield new BecomemonType[]{ BecomemonType.DRAGON, BecomemonType.TYPELESS };
             case "enderman":
-                yield BecomemonType.PSYCHIC;
+                yield new BecomemonType[]{ BecomemonType.PSYCHIC, BecomemonType.TYPELESS };
             case "endermite":
-                yield BecomemonType.PSYCHIC;
+                yield new BecomemonType[]{ BecomemonType.PSYCHIC, BecomemonType.BUG };
             case "evoker":
-                yield BecomemonType.DARK;
+                yield new BecomemonType[]{ BecomemonType.PSYCHIC, BecomemonType.TYPELESS };
             case "fox":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "frog":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "ghast":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.FIRE, BecomemonType.GHOST };
             case "glow_squid":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.FAIRY };
             case "goat":
-                yield BecomemonType.ROCK;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.ROCK };
             case "guardian":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.DARK };
             case "hoglin":
-                yield BecomemonType.FIGHTING;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.TYPELESS };
             case "horse":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "husk":
-                yield BecomemonType.POISON;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.GROUND };
             case "iron_golem":
-                yield BecomemonType.STEEL;
+                yield new BecomemonType[]{ BecomemonType.STEEL, BecomemonType.TYPELESS };
             case "llama":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "magma_cube":
-                yield BecomemonType.FIRE;
+                yield new BecomemonType[]{ BecomemonType.FIRE, BecomemonType.TYPELESS };
             case "mooshroom":
-                yield BecomemonType.GRASS;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.GRASS };
             case "mule":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "ocelot":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "panda":
-                yield BecomemonType.GRASS;
+                yield new BecomemonType[]{ BecomemonType.GRASS, BecomemonType.TYPELESS };
             case "parrot":
-                yield BecomemonType.FLYING;
+                yield new BecomemonType[]{ BecomemonType.FLYING, BecomemonType.TYPELESS };
             case "phantom":
-                yield BecomemonType.FLYING;
+                yield new BecomemonType[]{ BecomemonType.FLYING, BecomemonType.GHOST };
             case "pig":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "piglin":
-                yield BecomemonType.ROCK;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.ROCK };
             case "piglin_brute":
-                yield BecomemonType.FIGHTING;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.STEEL };
             case "pillager":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.TYPELESS };
             case "polar_bear":
-                yield BecomemonType.ICE;
+                yield new BecomemonType[]{ BecomemonType.ICE, BecomemonType.TYPELESS };
             case "pufferfish":
-                yield BecomemonType.POISON;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.POISON };
             case "rabbit":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "ravager":
-                yield BecomemonType.FIGHTING;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.TYPELESS };
             case "salmon":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "sheep":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "shulker":
-                yield BecomemonType.PSYCHIC;
+                yield new BecomemonType[]{ BecomemonType.PSYCHIC, BecomemonType.TYPELESS };
             case "silverfish":
-                yield BecomemonType.BUG;
+                yield new BecomemonType[]{ BecomemonType.BUG, BecomemonType.TYPELESS };
             case "skeleton":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.TYPELESS };
             case "skeleton_horse":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.GHOST };
             case "slime":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "sniffer":
-                yield BecomemonType.ROCK;
+                yield new BecomemonType[]{ BecomemonType.ROCK, BecomemonType.TYPELESS };
             case "snow_golem":
-                yield BecomemonType.ICE;
+                yield new BecomemonType[]{ BecomemonType.ICE, BecomemonType.TYPELESS };
             case "spider":
-                yield BecomemonType.DARK;
+                yield new BecomemonType[]{ BecomemonType.BUG, BecomemonType.TYPELESS };
             case "squid":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "stray":
-                yield BecomemonType.ICE;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.ICE };
             case "strider":
-                yield BecomemonType.FIRE;
+                yield new BecomemonType[]{ BecomemonType.FIRE, BecomemonType.TYPELESS };
             case "tadpole":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.WATER };
             case "trader_llama":
-                yield BecomemonType.GROUND;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.TYPELESS };
             case "tropical_fish":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.TYPELESS };
             case "turtle":
-                yield BecomemonType.WATER;
+                yield new BecomemonType[]{ BecomemonType.WATER, BecomemonType.ROCK };
             case "vex":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.DARK };
             case "villager":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "vindicator":
-                yield BecomemonType.FIGHTING;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.STEEL };
             case "wandering_trader":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "warden":
-                yield BecomemonType.DARK;
+                yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.TYPELESS };
             case "witch":
-                yield BecomemonType.DARK;
+                yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.PSYCHIC };
             case "wither":
-                yield BecomemonType.POISON;
+                yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.POISON };
             case "wither_skeleton":
-                yield BecomemonType.POISON;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.POISON };
             case "wolf":
-                yield BecomemonType.NORMAL;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "zoglin":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.GHOST };
             case "zombie":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.GHOST, BecomemonType.TYPELESS };
             case "zombie_horse":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.GROUND, BecomemonType.GHOST };
             case "zombie_villager":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.GHOST };
             case "zombified_piglin":
-                yield BecomemonType.GHOST;
+                yield new BecomemonType[]{ BecomemonType.FIGHTING, BecomemonType.GHOST };
             default:
-                yield BecomemonType.TYPELESS;
+                yield new BecomemonType[]{ BecomemonType.TYPELESS, BecomemonType.TYPELESS };
         };
 
         IEntityDataSaver entity = (IEntityDataSaver)this;
-        entity.getPersistentData().putString("type", type.getName());
+        entity.getPersistentData().putString("primaryType", type[0].getName());
+        entity.getPersistentData().putString("secondaryType", type[1].getName());
 
         MinecraftClient mc = MinecraftClient.getInstance();
-        if (mc.player != null && entity.getPersistentData().getString("type").equals("typeless")) {
-            mc.player.sendMessage(Text.of(entityType.getUntranslatedName() + ": " + entity.getPersistentData().getString("type")));
+        if (mc.player != null && entity.getPersistentData().getString("primaryType").equals("typeless")) {
+            String typeAsString = entity.getPersistentData().getString("primaryType");
+            if (!entity.getPersistentData().getString("secondaryType").equals("typeless")) {
+                typeAsString += " | " + entity.getPersistentData().getString("secondaryType");
+            }
+            mc.player.sendMessage(Text.of(
+                    entityType.getUntranslatedName() + ": " + typeAsString
+            ));
         }
     }
 }

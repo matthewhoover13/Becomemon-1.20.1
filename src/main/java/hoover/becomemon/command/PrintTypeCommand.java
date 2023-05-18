@@ -3,6 +3,7 @@ package hoover.becomemon.command;
 import com.google.common.collect.ImmutableList;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import hoover.becomemon.util.BecomemonType;
 import hoover.becomemon.util.IEntityDataSaver;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.command.argument.EntityArgumentType;
@@ -26,10 +27,15 @@ public class PrintTypeCommand {
         for (Entity target : targets) {
             if (target.isLiving()) {
                 IEntityDataSaver targetAsDataSaver = (IEntityDataSaver) target;
-                String type = targetAsDataSaver.getPersistentData().getString("type");
+                String primaryType = targetAsDataSaver.getPersistentData().getString("primaryType");
+                String secondaryType = targetAsDataSaver.getPersistentData().getString("secondaryType");
 
-                if (type.length() > 0) {
-                    source.sendFeedback(Text.of("Type of " + target.getName().getString() + " is " + type), true);
+                if (primaryType.length() > 0) {
+                    if (secondaryType.length() > 0 && !secondaryType.equals(BecomemonType.TYPELESS.getName())) {
+                        source.sendFeedback(Text.of("Type of " + target.getName().getString() + " is " + primaryType + "/" + secondaryType), true);
+                    } else {
+                        source.sendFeedback(Text.of("Type of " + target.getName().getString() + " is " + primaryType), true);
+                    }
                 } else {
                     source.sendFeedback(Text.of("No type has been set for " + target.getName().getString()), true);
                 }

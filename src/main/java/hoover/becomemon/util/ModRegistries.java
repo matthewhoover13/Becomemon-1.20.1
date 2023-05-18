@@ -13,7 +13,7 @@ public class ModRegistries {
     }
 
     private static void registerCommands() {
-        CommandRegistrationCallback.EVENT.register(SetTypeCommand::register);
+        //CommandRegistrationCallback.EVENT.register(SetTypeCommand::register);
         CommandRegistrationCallback.EVENT.register(PrintTypeCommand::register);
     }
 
