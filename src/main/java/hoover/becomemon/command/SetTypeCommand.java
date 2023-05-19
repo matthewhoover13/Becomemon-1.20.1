@@ -34,7 +34,7 @@ public class SetTypeCommand {
         for (Entity target : targets) {
             IEntityDataSaver targetAsDataSaver = (IEntityDataSaver)target;
 
-            targetAsDataSaver.getPersistentData().putString("type", type.getName());
+            targetAsDataSaver.getPersistentData().putString("primaryType", type.getName());
 
             source.sendFeedback(Text.of("Set type of " + target.getName().getString() + " to " + type.getName()), true);
         }
