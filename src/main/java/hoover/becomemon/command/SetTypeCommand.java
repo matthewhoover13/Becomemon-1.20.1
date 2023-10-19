@@ -16,6 +16,8 @@ import net.minecraft.text.Text;
 
 import java.util.Collection;
 
+// TO DO: Allow for changing both primary and secondary type
+
 public class SetTypeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
         LiteralArgumentBuilder<ServerCommandSource> literalArgumentBuilder = CommandManager.literal("type");

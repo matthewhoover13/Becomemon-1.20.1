@@ -14,6 +14,9 @@ import net.minecraft.text.Text;
 
 import java.util.Collection;
 
+// TO DO: Change "print" to "get" or something like that
+// TO DO: Allow for checking the types of a certain mob (not just generic selectors)
+
 public class PrintTypeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
         dispatcher.register(CommandManager.literal("type")
