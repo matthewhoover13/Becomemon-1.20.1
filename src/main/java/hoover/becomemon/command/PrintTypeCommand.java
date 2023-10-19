@@ -13,7 +13,6 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
 import java.util.Collection;
-import java.util.function.Supplier;
 
 public class PrintTypeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
@@ -33,12 +32,12 @@ public class PrintTypeCommand {
 
                 if (primaryType.length() > 0) {
                     if (secondaryType.length() > 0 && !secondaryType.equals(BecomemonType.TYPELESS.getName())) {
-                        source.sendFeedback((Supplier<Text>) Text.of("Type of " + target.getName().getString() + " is " + primaryType + "/" + secondaryType), true);
+                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryType + "/" + secondaryType));
                     } else {
-                        source.sendFeedback((Supplier<Text>) Text.of("Type of " + target.getName().getString() + " is " + primaryType), true);
+                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryType));
                     }
                 } else {
-                    source.sendFeedback((Supplier<Text>) Text.of("No type has been set for " + target.getName().getString()), true);
+                    source.sendMessage(Text.of("No type has been set for " + target.getName().getString()));
                 }
             }
         }
