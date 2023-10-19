@@ -28,7 +28,7 @@ public enum BecomemonType implements StringIdentifiable {
     TYPELESS(17, "typeless"),
     WATER(18, "water");
 
-    public static final StringIdentifiable.Codec<BecomemonType> CODEC;
+    public static final StringIdentifiable.EnumCodec<BecomemonType> CODEC;
     private static final IntFunction<BecomemonType> BY_ID;
     private final int id;
     private final String name;

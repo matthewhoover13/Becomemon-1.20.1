@@ -15,6 +15,7 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
 import java.util.Collection;
+import java.util.function.Supplier;
 
 public class SetTypeCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandRegistryAccess, CommandManager.RegistrationEnvironment registrationEnvironment) {
@@ -36,7 +37,7 @@ public class SetTypeCommand {
 
             targetAsDataSaver.getPersistentData().putString("primaryType", type.getName());
 
-            source.sendFeedback(Text.of("Set type of " + target.getName().getString() + " to " + type.getName()), true);
+            source.sendFeedback((Supplier<Text>) Text.of("Set type of " + target.getName().getString() + " to " + type.getName()), true);
         }
         return 0;
     }
