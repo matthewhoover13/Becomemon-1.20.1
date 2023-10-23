@@ -1,5 +1,7 @@
 package hoover.becomemon;
 
+import hoover.becomemon.item.ModItemGroups;
+import hoover.becomemon.item.ModItems;
 import hoover.becomemon.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +15,7 @@ public class Becomemon implements ModInitializer {
     @Override
     public void onInitialize() {
         ModRegistries.registerModStuff();
-        LOGGER.info("Hello Fabric world!");
+        ModItemGroups.registerItemGroups();
+        ModItems.registerModItems();
     }
 }
