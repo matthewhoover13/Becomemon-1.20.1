@@ -9,26 +9,26 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
+import static hoover.becomemon.util.BecomemonHelperMethods.*;
+
 @Mixin(LivingEntity.class)
 public abstract class ModLivingEntityDamageModifier {
     @ModifyVariable(method = "damage", at = @At("HEAD"))
     protected float modifyDamage(float amount, DamageSource source) {
         float newAmount = amount;
 
-        if (source.getSource() != null && source.getSource().isLiving()) {
-            IEntityDataSaver attackerAsDataSaver = (IEntityDataSaver)source.getSource();
-            BecomemonType attackingPrimaryType = BecomemonType.byName(attackerAsDataSaver.getPersistentData().getString("primaryType"));
-            BecomemonType attackingSecondaryType = BecomemonType.byName(attackerAsDataSaver.getPersistentData().getString("secondaryType"));
+        if (source.getAttacker() != null && source.getAttacker().isLiving()) {
+            IEntityDataSaver attackerAsDataSaver = (IEntityDataSaver)source.getAttacker();
+            BecomemonType[] attackingType = getTypes(attackerAsDataSaver);
 
             IEntityDataSaver defenderAsDataSaver = (IEntityDataSaver)this;
-            BecomemonType defendingPrimaryType = BecomemonType.byName(defenderAsDataSaver.getPersistentData().getString("primaryType"));
-            BecomemonType defendingSecondaryType = BecomemonType.byName(defenderAsDataSaver.getPersistentData().getString("secondaryType"));
+            BecomemonType[] defendingType = getTypes(defenderAsDataSaver);
 
-            if (attackingPrimaryType != null && attackingSecondaryType != null && defendingPrimaryType != null && defendingSecondaryType != null) {
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingPrimaryType, defendingPrimaryType);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingPrimaryType, defendingSecondaryType);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingSecondaryType, defendingPrimaryType);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingSecondaryType, defendingSecondaryType);
+            if (attackingType[0] != null && attackingType[1] != null && defendingType[0] != null && defendingType[1] != null) {
+                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[0], defendingType[0]);
+                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[0], defendingType[1]);
+                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[1], defendingType[0]);
+                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[1], defendingType[1]);
             }
             return newAmount;
         }

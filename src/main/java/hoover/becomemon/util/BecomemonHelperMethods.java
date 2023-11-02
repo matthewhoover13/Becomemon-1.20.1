@@ -12,6 +12,13 @@ public class BecomemonHelperMethods {
         return accuracy > random.nextFloat(100);
     }
 
+    public static BecomemonType[] getTypes(IEntityDataSaver entity) {
+        BecomemonType[] types = new BecomemonType[2];
+        types[0] = BecomemonType.byName(entity.getPersistentData().getString("primaryType"));
+        types[1] = BecomemonType.byName(entity.getPersistentData().getString("secondaryType"));
+        return types;
+    }
+
     public static float damageMultiplier(BecomemonType attacker, BecomemonType defender) {
         return switch (attacker) {
             case BUG -> switch (defender) {
