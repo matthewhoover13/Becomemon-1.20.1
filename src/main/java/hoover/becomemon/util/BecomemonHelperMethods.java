@@ -1,9 +1,16 @@
 package hoover.becomemon.util;
 
+import java.util.Random;
+
 public class BecomemonHelperMethods {
     private static final float SUPER_EFFECTIVE_MULTIPLIER = 2f;
     private static final float NOT_VERY_EFFECTIVE_MULTIPLIER = 0.5f;
     private static final float IMMUNE_MULTIPLIER = 0.25f;
+
+    public static float accuracyCheck(float accuracy) {
+        Random random = new Random();
+        return random.nextFloat(100);
+    }
 
     public static float damageMultiplier(BecomemonType attacker, BecomemonType defender) {
         return switch (attacker) {

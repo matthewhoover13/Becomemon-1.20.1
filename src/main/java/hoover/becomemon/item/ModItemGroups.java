@@ -17,6 +17,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TEST_ITEM);
                         entries.add(ModItems.BUNGER);
                         entries.add(ModItems.TEST_ADVANCED_ITEM);
+                        entries.add(ModItems.WILL_O_WISP);
                     }).build());
 
     public static void registerItemGroups() {
