@@ -4,5 +4,8 @@
   "item.becomemon.test_advanced_item": "Test Advanced Item",
   "item.becomemon.will_o_wisp": "Will-O-Wisp",
 
-  "itemgroup.becomemon": "Becomemon"
+  "itemgroup.becomemon": "Becomemon",
+
+  "key.category.becomemon": "Becomemon",
+  "key.becomemon.test": "Test"
 }
