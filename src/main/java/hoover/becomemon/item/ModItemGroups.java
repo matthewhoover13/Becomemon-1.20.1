@@ -16,9 +16,10 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.TEST_ITEM)).entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_ITEM);
                         entries.add(ModItems.BUNGER);
+                        entries.add(ModItems.TEST_ADVANCED_ITEM);
                     }).build());
 
     public static void registerItemGroups() {
-        Becomemon.LOGGER.info("Registering item groups for " +Becomemon.MOD_ID);
+        Becomemon.LOGGER.info("Registering item groups for " + Becomemon.MOD_ID);
     }
 }

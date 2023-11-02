@@ -1,6 +1,7 @@
 package hoover.becomemon.item;
 
 import hoover.becomemon.Becomemon;
+import hoover.becomemon.item.custom.TestAdvancedItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -12,11 +13,13 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings()));
-    public static final Item BUNGER = registerItem("bunger", new Item(new FabricItemSettings()));
+    public static final Item BUNGER = registerItem("bunger", new Item(new FabricItemSettings().maxDamage(64)));
+    public static final Item TEST_ADVANCED_ITEM = registerItem("test_advanced_item", new TestAdvancedItem(new FabricItemSettings()));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(TEST_ITEM);
         entries.add(BUNGER);
+        entries.add(TEST_ADVANCED_ITEM);
     }
 
     private static Item registerItem(String name, Item item) {
