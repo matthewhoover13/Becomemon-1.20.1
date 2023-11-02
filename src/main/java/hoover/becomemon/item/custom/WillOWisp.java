@@ -20,14 +20,12 @@ public class WillOWisp extends Item {
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (!user.getWorld().isClient()) {
-            float random = BecomemonHelperMethods.accuracyCheck(ACCURACY);
-            if (random < ACCURACY) {
+            if (BecomemonHelperMethods.accuracyCheck(ACCURACY)) {
                 entity.setOnFireFor(5);
                 user.sendMessage(Text.literal("Success"));
             } else {
                 user.sendMessage(Text.literal("Missed"));
             }
-            user.sendMessage(Text.literal("Random number: " + random));
         }
 
         return ActionResult.SUCCESS;
