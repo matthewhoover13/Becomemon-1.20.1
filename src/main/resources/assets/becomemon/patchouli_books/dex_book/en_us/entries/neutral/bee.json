@@ -1,0 +1,17 @@
+{
+  "name": "Bee",
+  "icon": "minecraft:honeycomb",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bug Flying"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:bee",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

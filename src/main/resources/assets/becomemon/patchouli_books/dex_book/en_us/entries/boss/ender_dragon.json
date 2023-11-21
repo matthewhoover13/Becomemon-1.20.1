@@ -1,0 +1,17 @@
+{
+  "name": "Ender Dragon",
+  "icon": "minecraft:dragon_egg",
+  "category": "becomemon:boss_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Dragon"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:ender_dragon",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

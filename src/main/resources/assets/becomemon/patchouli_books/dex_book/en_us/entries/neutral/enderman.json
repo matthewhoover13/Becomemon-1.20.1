@@ -1,0 +1,17 @@
+{
+  "name": "Enderman",
+  "icon": "minecraft:ender_pearl",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "psychic"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:enderman",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

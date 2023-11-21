@@ -1,0 +1,17 @@
+{
+  "name": "Elder Guardian",
+  "icon": "minecraft:prismarine_shard",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water Dark"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:elder_guardian",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

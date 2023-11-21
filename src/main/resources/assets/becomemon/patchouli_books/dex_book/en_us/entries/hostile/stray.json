@@ -1,0 +1,17 @@
+{
+  "name": "Stray",
+  "icon": "minecraft:tipped_arrow{Potion:slowness}",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost Ice"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:stray",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Cow",
+  "icon": "minecraft:beef",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:cow",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

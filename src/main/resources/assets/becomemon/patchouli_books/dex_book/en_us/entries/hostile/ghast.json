@@ -1,0 +1,17 @@
+{
+  "name": "Ghast",
+  "icon": "minecraft:ghast_tear",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fire Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:ghast",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

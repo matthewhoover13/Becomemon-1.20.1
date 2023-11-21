@@ -1,0 +1,17 @@
+{
+  "name": "Bat",
+  "icon": "minecraft:black_wool",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Flying"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:bat",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

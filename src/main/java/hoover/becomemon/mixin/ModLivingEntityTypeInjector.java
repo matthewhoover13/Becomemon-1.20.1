@@ -124,7 +124,7 @@ public abstract class ModLivingEntityTypeInjector {
             case "slime":
                 yield new BecomemonType[]{ BecomemonType.NORMAL, BecomemonType.TYPELESS };
             case "sniffer":
-                yield new BecomemonType[]{ BecomemonType.ROCK, BecomemonType.TYPELESS };
+                yield new BecomemonType[]{ BecomemonType.GRASS, BecomemonType.TYPELESS };
             case "snow_golem":
                 yield new BecomemonType[]{ BecomemonType.ICE, BecomemonType.TYPELESS };
             case "spider":
@@ -154,7 +154,7 @@ public abstract class ModLivingEntityTypeInjector {
             case "warden":
                 yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.TYPELESS };
             case "witch":
-                yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.PSYCHIC };
+                yield new BecomemonType[]{ BecomemonType.POISON, BecomemonType.TYPELESS };
             case "wither":
                 yield new BecomemonType[]{ BecomemonType.DARK, BecomemonType.POISON };
             case "wither_skeleton":

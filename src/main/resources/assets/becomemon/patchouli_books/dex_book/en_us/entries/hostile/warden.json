@@ -1,0 +1,17 @@
+{
+  "name": "Warden",
+  "icon": "minecraft:sculk_catalyst",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Dark"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:warden",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

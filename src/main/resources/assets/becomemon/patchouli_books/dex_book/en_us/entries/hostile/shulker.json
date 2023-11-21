@@ -1,0 +1,17 @@
+{
+  "name": "Shulker",
+  "icon": "minecraft:shulker_shell",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Psychic"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:shulker",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

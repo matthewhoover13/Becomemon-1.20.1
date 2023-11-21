@@ -1,0 +1,17 @@
+{
+  "name": "Zombified Piglin",
+  "icon": "minecraft:gold_nugget",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fighting Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:zombified_piglin",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

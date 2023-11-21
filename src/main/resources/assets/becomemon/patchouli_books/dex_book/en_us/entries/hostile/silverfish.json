@@ -1,0 +1,17 @@
+{
+  "name": "Silverfish",
+  "icon": "minecraft:infested_stone_bricks",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bug"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:silverfish",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

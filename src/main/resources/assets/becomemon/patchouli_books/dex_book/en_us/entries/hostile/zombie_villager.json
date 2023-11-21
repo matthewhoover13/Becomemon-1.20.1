@@ -1,0 +1,17 @@
+{
+  "name": "Zombie Villager",
+  "icon": "minecraft:golden_apple",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:zombie_villager",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

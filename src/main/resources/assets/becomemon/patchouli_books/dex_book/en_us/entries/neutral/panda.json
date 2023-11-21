@@ -1,0 +1,17 @@
+{
+  "name": "Panda",
+  "icon": "minecraft:bamboo",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Grass"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:panda",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

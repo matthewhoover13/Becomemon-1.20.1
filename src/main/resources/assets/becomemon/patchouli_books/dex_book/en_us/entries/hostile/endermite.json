@@ -1,0 +1,17 @@
+{
+  "name": "Endermite",
+  "icon": "minecraft:end_stone",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Psychic Bug"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:endermite",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

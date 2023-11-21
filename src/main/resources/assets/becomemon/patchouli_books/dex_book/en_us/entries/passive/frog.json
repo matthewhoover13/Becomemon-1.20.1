@@ -1,0 +1,17 @@
+{
+  "name": "Frog",
+  "icon": "minecraft:frogspawn",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:frog",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

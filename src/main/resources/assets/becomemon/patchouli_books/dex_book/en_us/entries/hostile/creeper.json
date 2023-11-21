@@ -1,0 +1,17 @@
+{
+  "name": "Creeper",
+  "icon": "minecraft:gunpowder",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Electric"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:creeper",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

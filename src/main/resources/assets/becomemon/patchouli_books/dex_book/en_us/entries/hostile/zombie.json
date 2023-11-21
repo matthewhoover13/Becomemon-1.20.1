@@ -1,0 +1,17 @@
+{
+  "name": "Zombie",
+  "icon": "minecraft:rotten_flesh",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:zombie",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

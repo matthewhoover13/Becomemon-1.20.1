@@ -1,0 +1,17 @@
+{
+  "name": "Guardian",
+  "icon": "minecraft:prismarine_crystals",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water Dark"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:guardian",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

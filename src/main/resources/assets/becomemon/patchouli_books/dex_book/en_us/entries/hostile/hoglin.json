@@ -1,0 +1,17 @@
+{
+  "name": "Hoglin",
+  "icon": "minecraft:crimson_fungus",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fighting"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:hoglin",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

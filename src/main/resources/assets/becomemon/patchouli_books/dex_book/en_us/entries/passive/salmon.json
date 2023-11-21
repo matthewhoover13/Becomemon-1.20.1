@@ -1,0 +1,17 @@
+{
+  "name": "Salmon",
+  "icon": "minecraft:salmon_bucket",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:salmon",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

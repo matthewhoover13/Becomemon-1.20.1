@@ -1,0 +1,17 @@
+{
+  "name": "Tropical Fish",
+  "icon": "minecraft:tropical_fish_bucket",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:tropical_fish",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

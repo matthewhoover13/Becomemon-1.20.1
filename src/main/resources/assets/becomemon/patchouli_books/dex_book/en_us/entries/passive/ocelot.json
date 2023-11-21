@@ -1,0 +1,17 @@
+{
+  "name": "Ocelot",
+  "icon": "minecraft:cod",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:ocelot",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

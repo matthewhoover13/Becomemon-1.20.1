@@ -1,0 +1,17 @@
+{
+  "name": "Goat",
+  "icon": "minecraft:goat_horn",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal Rock"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:goat",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

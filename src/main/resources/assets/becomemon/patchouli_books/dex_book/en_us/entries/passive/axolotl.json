@@ -1,0 +1,17 @@
+{
+  "name": "Axolotl",
+  "icon": "minecraft:axolotl_bucket",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:axolotl",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

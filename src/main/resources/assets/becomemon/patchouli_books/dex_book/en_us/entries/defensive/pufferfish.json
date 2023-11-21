@@ -1,0 +1,17 @@
+{
+  "name": "Pufferfish",
+  "icon": "minecraft:pufferfish_bucket",
+  "category": "becomemon:defensive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water Poison"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:pufferfish",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

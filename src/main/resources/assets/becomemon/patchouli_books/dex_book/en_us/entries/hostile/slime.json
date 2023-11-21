@@ -1,0 +1,17 @@
+{
+  "name": "Slime",
+  "icon": "minecraft:slime_ball",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:slime",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

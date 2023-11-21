@@ -1,0 +1,17 @@
+{
+  "name": "Skeleton",
+  "icon": "minecraft:arrow",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:skeleton",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

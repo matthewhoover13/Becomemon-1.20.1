@@ -1,0 +1,17 @@
+{
+  "name": "Wolf",
+  "icon": "minecraft:cooked_beef",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:wolf",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

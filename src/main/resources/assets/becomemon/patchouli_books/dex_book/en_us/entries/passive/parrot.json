@@ -1,0 +1,17 @@
+{
+  "name": "Parrot",
+  "icon": "minecraft:wheat_seeds",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Flying"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:parrot",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

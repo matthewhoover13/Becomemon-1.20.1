@@ -1,0 +1,17 @@
+{
+  "name": "Witch",
+  "icon": "minecraft:splash_potion{Potion:poison}",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Poison"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:witch",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

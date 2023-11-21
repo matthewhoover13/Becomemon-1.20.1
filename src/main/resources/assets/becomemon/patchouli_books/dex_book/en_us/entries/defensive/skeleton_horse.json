@@ -1,0 +1,17 @@
+{
+  "name": "Skeleton Horse",
+  "icon": "minecraft:bone",
+  "category": "becomemon:defensive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ground Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:skeleton_horse",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

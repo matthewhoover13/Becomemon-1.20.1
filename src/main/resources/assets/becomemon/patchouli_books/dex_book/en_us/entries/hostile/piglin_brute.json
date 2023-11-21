@@ -1,0 +1,17 @@
+{
+  "name": "Piglin Brute",
+  "icon": "minecraft:golden_axe",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fighting Steel"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:piglin_brute",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

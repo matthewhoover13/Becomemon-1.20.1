@@ -1,0 +1,17 @@
+{
+  "name": "Sniffer",
+  "icon": "minecraft:sniffer_egg",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Grass"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:sniffer",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

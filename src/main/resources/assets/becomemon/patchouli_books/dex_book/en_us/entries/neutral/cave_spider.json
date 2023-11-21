@@ -1,0 +1,17 @@
+{
+  "name": "Cave Spider",
+  "icon": "minecraft:spider_eye",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bug Poison"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:cave_spider",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Vex",
+  "icon": "minecraft:iron_sword",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost Dark"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:vex",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Horse",
+  "icon": "minecraft:iron_horse_armor",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:horse",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

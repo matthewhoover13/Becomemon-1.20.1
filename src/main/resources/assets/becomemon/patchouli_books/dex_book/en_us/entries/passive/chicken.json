@@ -1,0 +1,17 @@
+{
+  "name": "Chicken",
+  "icon": "minecraft:feather",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal Flying"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:chicken",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

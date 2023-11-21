@@ -1,0 +1,17 @@
+{
+  "name": "Iron Golem",
+  "icon": "minecraft:iron_ingot",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Steel"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:iron_golem",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

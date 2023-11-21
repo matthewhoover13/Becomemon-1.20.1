@@ -1,0 +1,17 @@
+{
+  "name": "Rabbit",
+  "icon": "minecraft:rabbit_foot",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:rabbit",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

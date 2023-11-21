@@ -1,0 +1,17 @@
+{
+  "name": "Polar Bear",
+  "icon": "minecraft:packed_ice",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ice"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:polar_bear",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

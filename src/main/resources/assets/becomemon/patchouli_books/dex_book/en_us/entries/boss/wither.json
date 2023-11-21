@@ -1,0 +1,17 @@
+{
+  "name": "Wither",
+  "icon": "minecraft:nether_star",
+  "category": "becomemon:boss_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Dark Poison"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:wither",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

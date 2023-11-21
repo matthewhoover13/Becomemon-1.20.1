@@ -1,0 +1,17 @@
+{
+  "name": "Allay",
+  "icon": "minecraft:amethyst_shard",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fairy"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:allay",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

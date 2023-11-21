@@ -1,0 +1,17 @@
+{
+  "name": "Wandering Trader",
+  "icon": "minecraft:lead",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:wandering_trader",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

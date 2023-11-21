@@ -1,0 +1,17 @@
+{
+  "name": "Glow Squid",
+  "icon": "minecraft:glow_ink_sac",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water Fairy"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:glow_squid",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

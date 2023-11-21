@@ -1,0 +1,17 @@
+{
+  "name": "Pig",
+  "icon": "minecraft:porkchop",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:pig",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Tadpole",
+  "icon": "minecraft:tadpole_bucket",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:tadpole",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

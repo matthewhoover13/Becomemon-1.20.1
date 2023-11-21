@@ -1,0 +1,17 @@
+{
+  "name": "Cod",
+  "icon": "minecraft:cod_bucket",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:cod",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

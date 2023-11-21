@@ -1,0 +1,17 @@
+{
+  "name": "Magma Cube",
+  "icon": "minecraft:magma_cream",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fire"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:magma_cube",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Turtle",
+  "icon": "minecraft:turtle_egg",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Water Rock"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:turtle",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

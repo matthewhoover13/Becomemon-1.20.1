@@ -1,0 +1,17 @@
+{
+  "name": "Drowned",
+  "icon": "minecraft:trident",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost Water"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:drowned",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Zoglin",
+  "icon": "minecraft:nether_wart_block",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fighting Ghost"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:zoglin",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

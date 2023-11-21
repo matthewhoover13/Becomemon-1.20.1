@@ -1,0 +1,17 @@
+{
+  "name": "Snow Golem",
+  "icon": "minecraft:snowball",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ice"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:snow_golem",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

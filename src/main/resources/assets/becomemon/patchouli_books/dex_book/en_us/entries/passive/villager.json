@@ -1,0 +1,17 @@
+{
+  "name": "Villager",
+  "icon": "minecraft:emerald",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:villager",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

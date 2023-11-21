@@ -1,0 +1,17 @@
+{
+  "name": "Evoker",
+  "icon": "minecraft:totem_of_undying",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Psychic"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:evoker",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

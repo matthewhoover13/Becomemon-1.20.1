@@ -1,0 +1,17 @@
+{
+  "name": "Wither Skeleton",
+  "icon": "minecraft:coal",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost Poison"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:wither_skeleton",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

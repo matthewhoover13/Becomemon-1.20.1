@@ -1,0 +1,17 @@
+{
+  "name": "Mule",
+  "icon": "minecraft:chest",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:mule",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

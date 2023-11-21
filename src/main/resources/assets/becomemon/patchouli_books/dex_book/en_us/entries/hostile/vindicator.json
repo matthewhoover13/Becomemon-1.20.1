@@ -1,0 +1,17 @@
+{
+  "name": "Vindicator",
+  "icon": "minecraft:iron_axe",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Fighting Steel"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:vindicator",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

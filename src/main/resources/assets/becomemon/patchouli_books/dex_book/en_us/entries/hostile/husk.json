@@ -1,0 +1,17 @@
+{
+  "name": "Husk",
+  "icon": "minecraft:sand",
+  "category": "becomemon:hostile_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ghost Ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:husk",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

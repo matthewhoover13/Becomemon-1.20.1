@@ -1,0 +1,17 @@
+{
+  "name": "Trader Llama",
+  "icon": "minecraft:blue_carpet",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:trader_llama",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

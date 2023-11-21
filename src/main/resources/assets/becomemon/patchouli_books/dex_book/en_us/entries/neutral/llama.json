@@ -1,0 +1,17 @@
+{
+  "name": "Llama",
+  "icon": "minecraft:white_carpet",
+  "category": "becomemon:neutral_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:llama",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

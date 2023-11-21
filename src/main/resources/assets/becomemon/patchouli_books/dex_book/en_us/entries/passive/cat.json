@@ -1,0 +1,17 @@
+{
+  "name": "Cat",
+  "icon": "minecraft:salmon",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Normal"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:cat",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}

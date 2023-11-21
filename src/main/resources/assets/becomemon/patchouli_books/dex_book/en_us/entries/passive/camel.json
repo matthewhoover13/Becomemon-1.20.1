@@ -1,0 +1,17 @@
+{
+  "name": "Camel",
+  "icon": "minecraft:cactus",
+  "category": "becomemon:passive_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Ground"
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:camel",
+      "rotate": false,
+      "default_rotation": 0
+    }
+  ]
+}
