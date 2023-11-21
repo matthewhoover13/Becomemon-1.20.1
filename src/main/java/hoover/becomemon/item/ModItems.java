@@ -1,6 +1,7 @@
 package hoover.becomemon.item;
 
 import hoover.becomemon.Becomemon;
+import hoover.becomemon.item.custom.Teleport;
 import hoover.becomemon.item.custom.TestAdvancedItem;
 import hoover.becomemon.item.custom.WillOWisp;
 import hoover.becomemon.util.BecomemonCategory;
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item BUNGER = registerItem("bunger", new Item(new FabricItemSettings()));
     public static final Item TEST_ADVANCED_ITEM = registerItem("test_advanced_item", new TestAdvancedItem(new FabricItemSettings().maxDamage(64)));
     public static final Item WILL_O_WISP = registerItem("will_o_wisp", new WillOWisp(new FabricItemSettings(), BecomemonType.FIRE, 0, 85, BecomemonCategory.STATUS));
+    public static final Item TELEPORT = registerItem("teleport", new Teleport(new FabricItemSettings(), BecomemonType.PSYCHIC, 0, 100, BecomemonCategory.STATUS));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Becomemon.MOD_ID, name), item);
