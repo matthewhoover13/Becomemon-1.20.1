@@ -6,7 +6,8 @@ import hoover.becomemon.util.BecomemonType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
@@ -20,9 +21,9 @@ public class WillOWisp extends MoveItem {
         if (!user.getWorld().isClient()) {
             if (BecomemonHelperMethods.accuracyCheck(accuracy)) {
                 entity.setOnFireFor(5);
-                user.sendMessage(Text.literal("Success"));
+                user.getWorld().playSound(null, entity.getBlockPos(), SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.PLAYERS, 1.0f, 1.0f);
             } else {
-                user.sendMessage(Text.literal("Missed"));
+                user.getWorld().playSound(null, entity.getBlockPos(), SoundEvents.ENTITY_PLAYER_ATTACK_NODAMAGE, SoundCategory.PLAYERS, 1.0f, 1.0f);
             }
         }
 
