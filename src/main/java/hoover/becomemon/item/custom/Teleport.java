@@ -4,11 +4,7 @@ import hoover.becomemon.util.BecomemonCategory;
 import hoover.becomemon.util.BecomemonType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -19,7 +15,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
 
 public class Teleport extends MoveItem {
     public Teleport(Settings settings, BecomemonType type, float power, float accuracy, BecomemonCategory category) {
@@ -45,7 +40,8 @@ public class Teleport extends MoveItem {
             if (blockHitResult.getType() == HitResult.Type.BLOCK) {
                 BlockPos blockPos = blockHitResult.getBlockPos();
                 blockPos = blockHitResult.getSide() == Direction.DOWN ? blockPos.add(blockHitResult.getSide().getVector().multiply(2)) : blockPos.add(blockHitResult.getSide().getVector());
-                user.teleport(blockPos.getX() + 0.5F, blockPos.getY(), blockPos.getZ() + 0.5F);
+                user.teleport(blockPos.getX() + 0.5f, blockPos.getY(), blockPos.getZ() + 0.5f);
+                world.playSound(null, blockPos, SoundEvents.ENTITY_ENDERMAN_TELEPORT, user.getSoundCategory(), 1.0f, 1.0f);
                 user.getItemCooldownManager().set(this, 200);
                 return TypedActionResult.success(itemStack, world.isClient());
             }
