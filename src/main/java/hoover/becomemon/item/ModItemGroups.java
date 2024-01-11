@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TEST_ADVANCED_ITEM);
                         entries.add(ModItems.WILL_O_WISP);
                         entries.add(ModItems.TELEPORT);
+                        entries.add(ModItems.RECOVER);
                     }).build());
 
     public static void registerItemGroups() {
