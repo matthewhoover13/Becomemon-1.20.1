@@ -24,7 +24,7 @@ public class KeyInputHandler {
            }
            else if (typesKey.wasPressed()) {
                if (client.player != null) {
-                   client.setScreenAndRender(new TutorialScreen(client.currentScreen));
+                   client.setScreen(new TutorialScreen(client.currentScreen));
                }
            }
         });

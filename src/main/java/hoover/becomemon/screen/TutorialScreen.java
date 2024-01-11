@@ -23,19 +23,22 @@ public class TutorialScreen extends Screen {
     @Override
     protected void init() {
         button1 = ButtonWidget.builder(Text.literal("Button 1"), button -> {
-            System.out.println("You clicked button1!");
+            client.player.sendMessage(Text.of("You clicked button1!"));
         })
                 .dimensions(width / 2 - 205, 20, 200, 20)
                 .tooltip(Tooltip.of(Text.literal("Tooltip of button1")))
                 .build();
         button2 = ButtonWidget.builder(Text.literal("Button 2"), button -> {
-                    System.out.println("You clicked button2!");
-                })
+            client.player.sendMessage(Text.of("You clicked button2!"));
+        })
                 .dimensions(width / 2 + 5, 20, 200, 20)
                 .tooltip(Tooltip.of(Text.literal("Tooltip of button2")))
                 .build();
         addDrawableChild(button1);
         addDrawableChild(button2);
+        addDrawableChild(ButtonWidget.builder(Text.literal("Button 3"), button -> {
+            client.player.sendMessage(Text.of("You clicked button3!"));
+        }).build());
     }
 
     @Override
