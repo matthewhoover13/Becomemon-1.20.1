@@ -1,5 +1,6 @@
 package hoover.becomemon;
 
+import hoover.becomemon.effect.ModEffects;
 import hoover.becomemon.item.ModItemGroups;
 import hoover.becomemon.item.ModItems;
 import hoover.becomemon.util.ModRegistries;
@@ -17,5 +18,6 @@ public class Becomemon implements ModInitializer {
         ModRegistries.registerModStuff();
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
+        ModEffects.registerEffects();
     }
 }

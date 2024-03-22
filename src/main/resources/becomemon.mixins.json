@@ -5,7 +5,8 @@
 	"mixins": [
 		"ModEntityDataSaver",
 		"ModLivingEntityTypeInjector",
-		"ModLivingEntityDamageModifier"
+		"ModLivingEntityDamageModifier",
+		"ModLivingEntityParalysisJumpModifier"
 	],
 	"injectors": {
 		"defaultRequire": 1
