@@ -1,10 +1,7 @@
 package hoover.becomemon.item;
 
 import hoover.becomemon.Becomemon;
-import hoover.becomemon.item.custom.Recover;
-import hoover.becomemon.item.custom.Teleport;
-import hoover.becomemon.item.custom.TestAdvancedItem;
-import hoover.becomemon.item.custom.WillOWisp;
+import hoover.becomemon.item.custom.*;
 import hoover.becomemon.util.BecomemonCategory;
 import hoover.becomemon.util.BecomemonType;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -20,6 +17,7 @@ public class ModItems {
     public static final Item WILL_O_WISP = registerItem("will_o_wisp", new WillOWisp(new FabricItemSettings(), BecomemonType.FIRE, 0, 85, BecomemonCategory.STATUS));
     public static final Item TELEPORT = registerItem("teleport", new Teleport(new FabricItemSettings(), BecomemonType.PSYCHIC, 0, 100, BecomemonCategory.STATUS));
     public static final Item RECOVER = registerItem("recover", new Recover(new FabricItemSettings(), BecomemonType.NORMAL, 0, 100, BecomemonCategory.STATUS));
+    public static final Item THUNDER_WAVE = registerItem("thunder_wave", new ThunderWave(new FabricItemSettings(), BecomemonType.ELECTRIC, 0, 90, BecomemonCategory.STATUS));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Becomemon.MOD_ID, name), item);

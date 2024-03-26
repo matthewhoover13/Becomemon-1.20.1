@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.WILL_O_WISP);
                         entries.add(ModItems.TELEPORT);
                         entries.add(ModItems.RECOVER);
+                        entries.add(ModItems.THUNDER_WAVE);
                     }).build());
 
     public static void registerItemGroups() {
