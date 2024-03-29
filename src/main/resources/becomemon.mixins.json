@@ -6,7 +6,8 @@
 		"ModEntityDataSaver",
 		"ModLivingEntityTypeInjector",
 		"ModLivingEntityDamageModifier",
-		"ModLivingEntityParalysisJumpModifier"
+		"ModLivingEntityParalysisJumpModifier",
+		"ModPlayerEntityTypeStorage"
 	],
 	"injectors": {
 		"defaultRequire": 1
