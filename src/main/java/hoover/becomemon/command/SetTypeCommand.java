@@ -6,7 +6,7 @@ import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import hoover.becomemon.util.BecomemonType;
-import hoover.becomemon.util.IEntityDataSaver;
+import hoover.becomemon.util.IEntityTypeStorage;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.command.argument.EntityArgumentType;
 import net.minecraft.entity.Entity;
@@ -39,13 +39,13 @@ public class SetTypeCommand {
 
     public static int run(ServerCommandSource source, Collection<? extends Entity> targets, BecomemonType type, boolean primaryType) throws CommandSyntaxException {
         for (Entity target : targets) {
-            IEntityDataSaver targetAsDataSaver = (IEntityDataSaver)target;
+            IEntityTypeStorage entity = (IEntityTypeStorage) target;
 
             if (primaryType) {
-                targetAsDataSaver.getPersistentData().putString("primaryType", type.getName());
+                entity.setPrimaryType(type);
                 source.sendMessage(Text.of("Set primary type of " + target.getName().getString() + " to " + type.getName()));
             } else {
-                targetAsDataSaver.getPersistentData().putString("secondaryType", type.getName());
+                entity.setSecondaryType(type);
                 source.sendMessage(Text.of("Set secondary type of " + target.getName().getString() + " to " + type.getName()));
             }
         }

@@ -12,10 +12,10 @@ public class BecomemonHelperMethods {
         return accuracy > random.nextFloat(100);
     }
 
-    public static BecomemonType[] getTypes(IEntityDataSaver entity) {
+    public static BecomemonType[] getTypes(IEntityTypeStorage entity) {
         BecomemonType[] types = new BecomemonType[2];
-        types[0] = BecomemonType.byName(entity.getPersistentData().getString("primaryType"));
-        types[1] = BecomemonType.byName(entity.getPersistentData().getString("secondaryType"));
+        types[0] = entity.getPrimaryType();
+        types[1] = entity.getSecondaryType();
         return types;
     }
 

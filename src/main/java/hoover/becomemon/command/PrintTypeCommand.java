@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import hoover.becomemon.util.BecomemonType;
-import hoover.becomemon.util.IEntityDataSaver;
+import hoover.becomemon.util.IEntityTypeStorage;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.command.argument.EntityArgumentType;
 import net.minecraft.entity.Entity;
@@ -29,15 +29,15 @@ public class PrintTypeCommand {
     private static int run(ServerCommandSource source, Collection<? extends Entity> targets) throws CommandSyntaxException {
         for (Entity target : targets) {
             if (target.isLiving()) {
-                IEntityDataSaver targetAsDataSaver = (IEntityDataSaver) target;
-                String primaryType = targetAsDataSaver.getPersistentData().getString("primaryType");
-                String secondaryType = targetAsDataSaver.getPersistentData().getString("secondaryType");
+                IEntityTypeStorage entity = (IEntityTypeStorage) target;
+                String primaryTypeStr = entity.getPrimaryType().asString();
+                String secondaryTypeStr = entity.getSecondaryType().asString();
 
-                if (primaryType.length() > 0) {
-                    if (secondaryType.length() > 0 && !secondaryType.equals(BecomemonType.TYPELESS.getName())) {
-                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryType + "/" + secondaryType));
+                if (primaryTypeStr.length() > 0) {
+                    if (secondaryTypeStr.length() > 0 && !secondaryTypeStr.equals(BecomemonType.TYPELESS.getName())) {
+                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryTypeStr + "/" + secondaryTypeStr));
                     } else {
-                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryType));
+                        source.sendMessage(Text.of("Type of " + target.getName().getString() + " is " + primaryTypeStr));
                     }
                 } else {
                     source.sendMessage(Text.of("No type has been set for " + target.getName().getString()));

@@ -3,11 +3,11 @@
 	"package": "hoover.becomemon.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ModEntityDataSaver",
 		"ModLivingEntityTypeInjector",
 		"ModLivingEntityDamageModifier",
 		"ModLivingEntityParalysisJumpModifier",
-		"ModPlayerEntityTypeStorage"
+		"ModPlayerEntityTypeInventory",
+		"ModLivingEntityTypeStorage"
 	],
 	"injectors": {
 		"defaultRequire": 1

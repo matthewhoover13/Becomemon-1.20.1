@@ -1,12 +1,9 @@
 package hoover.becomemon.mixin;
 
 import hoover.becomemon.util.BecomemonType;
-import hoover.becomemon.util.IEntityDataSaver;
-import hoover.becomemon.util.IPlayerTypeStorage;
-import net.minecraft.client.MinecraftClient;
+import hoover.becomemon.util.IEntityTypeStorage;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -177,30 +174,20 @@ public abstract class ModLivingEntityTypeInjector {
                     yield new BecomemonType[]{BecomemonType.TYPELESS, BecomemonType.TYPELESS};
             };
 
-            IEntityDataSaver entity = (IEntityDataSaver) this;
-            entity.getPersistentData().putString("primaryType", type[0].getName());
-            entity.getPersistentData().putString("secondaryType", type[1].getName());
+            IEntityTypeStorage entity = (IEntityTypeStorage) this;
+            entity.setPrimaryType(type[0]);
+            entity.setSecondaryType(type[1]);
 
-            MinecraftClient mc = MinecraftClient.getInstance();
-            if (mc.player != null && entity.getPersistentData().getString("primaryType").equals("typeless")) {
-                String typeAsString = entity.getPersistentData().getString("primaryType");
-                if (!entity.getPersistentData().getString("secondaryType").equals("typeless")) {
-                    typeAsString += " | " + entity.getPersistentData().getString("secondaryType");
+            /*MinecraftClient mc = MinecraftClient.getInstance();
+            if (mc.player != null && entity.getPrimaryType() == BecomemonType.TYPELESS) {
+                String typeAsString = entity.getPrimaryType().asString();
+                if (entity.getSecondaryType() != BecomemonType.TYPELESS) {
+                    typeAsString += " | " + entity.getSecondaryType().asString();
                 }
                 mc.player.sendMessage(Text.of(
                         entityType.getUntranslatedName() + ": " + typeAsString
                 ));
-                if (entityType == EntityType.PLAYER) {
-                    IPlayerTypeStorage player = (IPlayerTypeStorage) this;
-                    player.setPrimaryType(type[0]);
-                    player.setSecondaryType(type[1]);
-                    typeAsString = player.getPrimaryType().asString();
-                    if (player.getSecondaryType() != BecomemonType.TYPELESS) {
-                        typeAsString += " | " + player.getSecondaryType().asString();
-                    }
-                    mc.player.sendMessage(Text.of(entityType.getUntranslatedName() + ": " + typeAsString));
-                }
-            }
+            }*/
         }
     }
 }

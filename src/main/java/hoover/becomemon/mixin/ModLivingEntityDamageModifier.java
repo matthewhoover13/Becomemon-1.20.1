@@ -1,8 +1,7 @@
 package hoover.becomemon.mixin;
 
-import hoover.becomemon.util.BecomemonHelperMethods;
 import hoover.becomemon.util.BecomemonType;
-import hoover.becomemon.util.IEntityDataSaver;
+import hoover.becomemon.util.IEntityTypeStorage;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,18 +17,19 @@ public abstract class ModLivingEntityDamageModifier {
         float newAmount = amount;
 
         if (source.getAttacker() != null && source.getAttacker().isLiving()) {
-            IEntityDataSaver attackerAsDataSaver = (IEntityDataSaver)source.getAttacker();
-            BecomemonType[] attackingType = getTypes(attackerAsDataSaver);
+            IEntityTypeStorage attacker = (IEntityTypeStorage) source.getAttacker();
+            BecomemonType[] attackingType = getTypes(attacker);
 
-            IEntityDataSaver defenderAsDataSaver = (IEntityDataSaver)this;
-            BecomemonType[] defendingType = getTypes(defenderAsDataSaver);
+            IEntityTypeStorage defender = (IEntityTypeStorage) this;
+            BecomemonType[] defendingType = getTypes(defender);
 
             if (attackingType[0] != null && attackingType[1] != null && defendingType[0] != null && defendingType[1] != null) {
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[0], defendingType[0]);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[0], defendingType[1]);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[1], defendingType[0]);
-                newAmount *= BecomemonHelperMethods.damageMultiplier(attackingType[1], defendingType[1]);
+                newAmount *= damageMultiplier(attackingType[0], defendingType[0]);
+                newAmount *= damageMultiplier(attackingType[0], defendingType[1]);
+                newAmount *= damageMultiplier(attackingType[1], defendingType[0]);
+                newAmount *= damageMultiplier(attackingType[1], defendingType[1]);
             }
+
             return newAmount;
         }
         return amount;
